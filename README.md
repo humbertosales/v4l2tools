@@ -72,19 +72,19 @@ Install
 
      make install
 
-Using Docker image
+Using Docker image for RPI (arm6v32)
 ===============
 
 You can expose V4L2 devices from your host using :
 
-        docker run --device=/dev/video0 --device=/dev/video1 -it mpromonet/v4l2tools
+        docker run --device=/dev/video0 --device=/dev/video1 -it humbertosales/v4l2tools /usr/local/bin/v4l2compress
 
 The container entry point is the v4l2tools application, then you can :
 
 * get the help using :
 
-        docker run -it mpromonet/v4l2tools -h
+        docker run -it humbertosales/v4l2tools /usr/local/bin/v4l2compress -h
 
 * run the container specifying some paramaters :
 
-        docker run --device=/dev/video0 --device=/dev/video1 -it mpromonet/v4l2tools -fH264
+        docker run --device=/dev/video0 --device=/dev/video1 -it humbertosales/v4l2tools /usr/local/bin/v4l2compress -fH264
